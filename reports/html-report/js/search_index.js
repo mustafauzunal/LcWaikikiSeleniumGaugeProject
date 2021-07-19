@@ -1,0 +1,1 @@
+var index = {"Tags":{},"Specs":{"LcWaikiki Selenium Gauge Test":["specs/example.html"]}};

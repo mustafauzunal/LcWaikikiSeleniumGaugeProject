@@ -1,0 +1,45 @@
+Created by testinium on 18.07.2021
+
+This is a concept file with following syntax for each concept.
+# Çerezler pop-up ını kapat
+* "//*[@class='closeBtn']" li elemente tıkla
+
+#Anasayfanın açıldığı kontrol edilir
+*"https://www.lcwaikiki.com/tr-TR/TR" li ve "Anasayfa" isimli sayfa açık mı
+
+#Menüden Erkek seçeneğinin üzerinde durup, açılan pencereden gömlek seçilir
+*"//*[@data-tracking-label='ERKEK']" li elementin üzerine gelip menüden "//*[@href='/tr-TR/TR/kategori/erkek/gomlek']" li elemente tıklama
+
+#Erkek gömlek sayfası açıldığı kontrol edilir
+*"https://www.lcwaikiki.com/tr-TR/TR/kategori/erkek/gomlek" li ve "Erkek Gömlek" isimli sayfa açık mı
+
+#Sırala menüsünden en yüksek fiyattan seçeneği seçilir
+* "//*[@id='dropdownMenu1']" li elementin üzerine gelip tıklayarak menüden "//*[@data-tracking-label='FiyatAzalan']" li elemente tıklama
+
+#Seçimin 'En Yüksek Fiyattan' olduğu kontrol edilir
+*"//*[@class='raw-price ']" li listenin sıralamasını kontrol et
+
+#İlk 3 ürün favorilere eklenir
+* "//*[@class='emi-item fav']" li listeden ilk 3 ürünü favorilere ekle
+
+#Sağ üstteki favorilerim butonuna tıklanır
+* "//*[@class='header-favorite-icon bndl-like bndl-like-dims']" li elemente tıkla
+
+#Favorilerim sayfasının açıldığı doğrulanır
+*"https://www.lcwaikiki.com/tr-TR/TR/favorilistem" li ve "Favorilerim" isimli sayfa açık mı
+
+#Favori olarak seçilen 3 ürünün orada olduğu kontrol edilir
+*"//*[@class='picture-box']" li listede 3 eleman var mı?
+
+#Tümünü seç butonuna tıklanır
+* "//*[@id='selectAll']" li elemente tıkla
+
+#Tümünün seçildiği kontrol edilir
+*"//*[@checked='checked']" li listede 3 eleman da seçildi mı?
+
+#Seçilenleri sil butonuna tıklanır
+*  "//*[@id='removeSelected']" li elemente tıkla
+
+#'Favori Ürününüz Yok' metni sayfada gözlemlenir
+*"p[class='text-center bold favoriteNoItemHeaderColor']" li elementin içinde Favori Ürününüz Yok yazıyor mu?
+
