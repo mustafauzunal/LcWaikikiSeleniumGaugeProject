@@ -78,19 +78,6 @@ public class StepImplementation extends BaseTest{
         Logger.info("Favoriye eklenen 3 ürün de seçilmiştir");
     }
 
-    @Step("<xpath> li listenin sıralamasını kontrol et")
-    public void checkOrder(String xpath){
-        boolean x = false;
-        List<WebElement> li = driver.findElements(By.xpath(xpath));
-        if(Integer.parseInt(li.get(0).getText().substring(0,3))>Integer.parseInt(li.get(1).getText().substring(0,3))){
-            x=true;
-        }
-
-        Assert.assertTrue("Sıralama doğru değil",x);
-
-        Logger.info("Sıralama, En Yüksek Fiyattan olarak seçilmiştir");
-    }
-
     @Step("<xpath> li elementin içinde Favori Ürününüz Yok yazıyor mu?")
     public void checkWritten(String xpath) throws InterruptedException {
         Thread.sleep(1000);
@@ -98,6 +85,15 @@ public class StepImplementation extends BaseTest{
         String y = "Favori Ürününüz Yok";
         Assert.assertEquals("Favori ürününüz yok yazmıyor",y , x);
         Logger.info("Favori Ürününüz Yok metni sayfadadır");
+    }
+
+    @Step("<xpath> li elementin içinde En Yüksek Fiyat yazıyor mu?")
+    public void checkWrittenFiyat(String xpath) throws InterruptedException {
+        Thread.sleep(1000);
+        String x = driver.findElement(By.xpath(xpath)).getText();
+        String y = "En Yüksek Fiyat";
+        Assert.assertEquals("En Yüksek Fiyat yazmıyor",y , x);
+        Logger.info("En Yüksek Fiyat metni sayfadadır");
     }
 
 

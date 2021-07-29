@@ -16,8 +16,8 @@ This is a concept file with following syntax for each concept.
 #Sırala menüsünden en yüksek fiyattan seçeneği seçilir
 * "//*[@id='dropdownMenu1']" li elementin üzerine gelip tıklayarak menüden "//*[@data-tracking-label='FiyatAzalan']" li elemente tıklama
 
-#Seçimin 'En Yüksek Fiyattan' olduğu kontrol edilir
-*"//*[@class='raw-price ']" li listenin sıralamasını kontrol et
+#En yüksek fiyat yazıyor mu?
+*"//a[@id='dropdownMenu1']/label" li elementin içinde En Yüksek Fiyat yazıyor mu?
 
 #İlk 3 ürün favorilere eklenir
 * "//*[@class='emi-item fav']" li listeden ilk 3 ürünü favorilere ekle
