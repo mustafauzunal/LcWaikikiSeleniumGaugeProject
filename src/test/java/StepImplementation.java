@@ -78,7 +78,7 @@ public class StepImplementation extends BaseTest{
         Logger.info("Favoriye eklenen 3 ürün de seçilmiştir");
     }
 
-    @Step("<xpath> li elementin içinde Favori Ürününüz Yok yazıyor mu?")
+    @Step("<css> li elementin içinde Favori Ürününüz Yok yazıyor mu?")
     public void checkWritten(String xpath) throws InterruptedException {
         Thread.sleep(1000);
         String x = driver.findElement(By.cssSelector(xpath)).getText();
